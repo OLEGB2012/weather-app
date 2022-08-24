@@ -50,4 +50,11 @@ Useful links:
 > git add .
 > git commit -am "Initial setup"
 
-5) 
+5) Создать репозиторий в личном Github-аккаунте:
+https://github.com/OLEGB2012/weather-app.git
+
+6) Связь локальной и удаленной репы:
+> git remote add origin https://github.com/OLEGB2012/weather-app.git
+
+7) Публикуем начальный коммит:
+> git push -u origin master
