@@ -22,11 +22,11 @@ const Header = (props) => {
           />
           <datalist id="browsers">
             <option value="Current location" />
-            <option value="Hyderabad" />
-            <option value="Kolkata" />
-            <option value="Bangalore " />
-            <option value="Chennai" />
-            <option value="Mumbai" />
+            <option value="Minsk" />
+            <option value="Brest" />
+            <option value="Hrodna" />
+            <option value="Gomel" />
+            <option value="Mogilev" />
           </datalist>
         </div>
         <button
