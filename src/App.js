@@ -32,7 +32,7 @@ class App extends Component {
       this.setState(this.newState);
     } else {
       let locality = city,
-        countryRegion = "IN"; // Region is set to India
+        countryRegion = "BY"; // Region is set to India
       axios
         .get(
           `http://dev.virtualearth.net/REST/v1/Locations?&countryRegion=${countryRegion}&locality=${locality}&key=${geocoding_api_key}`
