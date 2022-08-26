@@ -9,7 +9,6 @@
    - User name: olegb
    - Email:     olegb2012@gmail.com
    - Pass:      K#DW2Liq6j4S!Lw
-   - API key:   59378d3fbb14ebbd6be6dbd30f0c219d
 
  Письмо уведомления:
  -------------------
@@ -46,15 +45,31 @@ Useful links:
 Установка пакетов:
 > npm install axios chart.js react-chartjs-2 --save
 
-4) Фиксим изменения
+4) "Спрятать" ключи от публикации в репе:
+- В .gitignore добавить имена файлов:
+    .env
+    Setup.txt
+- Создать файл .env, задать переменные окружения для ключей:
+    API_KEY="59378d3fbb14ebbd6be6dbd30f0c219d"
+    GEOCODING_API_KEY="Ao4FY2s9-qUxQEBU4LlbQ5W3K8up3jMtptk6uOwD9oaW42HYubyg9N34Hen3B_Gi"
+- Создать файл конфигурации config.js, экпортировать ключи:
+    export const api_key=process.env.API_KEY
+    export const geocoding_api_key=process.env.GEOCODING_API_KEY
+- Использование ключа:
+    import { geocoding_api_key } from "./config";
+    ...
+    axios.get(`http://dev.virtualearth.net/REST/v1/Locations?key=${geocoding_api_key}`)...
+    ...
+
+5) Фиксим изменения:
 > git add .
 > git commit -am "Initial setup"
 
-5) Создать репозиторий в личном Github-аккаунте:
+6) Создать репозиторий в личном Github-аккаунте:
 https://github.com/OLEGB2012/weather-app.git
 
-6) Связь локальной и удаленной репы:
+7) Связь локальной и удаленной репы:
 > git remote add origin https://github.com/OLEGB2012/weather-app.git
 
-7) Публикуем начальный коммит:
+8) Публикуем начальный коммит:
 > git push -u origin master
