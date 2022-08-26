@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import { geocoding_api_key } from "./config";
+import Header from "./components/Header";
 
 class App extends Component {
   newState = {}; // used to update state
@@ -11,7 +12,7 @@ class App extends Component {
     // initiate the state to empty values
     this.state = {
       latitude: "",
-      longitgude: "",
+      longitude: "",
       searchTerm: "",
     };
     // Get the coordinates of the current user location
@@ -19,7 +20,7 @@ class App extends Component {
       const coords = position.coords;
       this.newState = {
         latitude: coords.latitude,
-        longitgude: coords.longitude,
+        longitude: coords.longitude,
       };
       this.setState(this.newState);
     });
@@ -64,6 +65,7 @@ class App extends Component {
     });
     console.log(newSearch);
     this.getCoordinates(newSearch);
+    e.preventDefault();
   };
   // Update the coordinates in the state so that the child components are rerendered for new coordinates.
   handleSearch = (e) => {
@@ -76,11 +78,21 @@ class App extends Component {
       },
       () => console.log(this.state)
     );
+    e.preventDefault();
   };
   // render method
   render() {
     if (this.state !== null) {
-      return <div className="App"></div>;
+      return (
+        <div className="App">
+          <Header
+            handleSearch={(e) => this.handleSearch(e)}
+            handleChange={(e) => {
+              this.handleChange(e);
+            }}
+          />
+        </div>
+      );
     } else return <div></div>;
   }
 }
