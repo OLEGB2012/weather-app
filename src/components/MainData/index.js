@@ -3,6 +3,8 @@ import axios from "axios";
 import { api_key } from "../../config";
 import "./index.css";
 import WeatherCard from "../WeatherCard";
+import SummaryTable from "../SummaryTable";
+import WeatherChart from "../WeatherChart";
 
 const MainData = (props) => {
   const { latitude, longitude } = props.coords;
@@ -38,7 +40,16 @@ const MainData = (props) => {
             mainData={mainData}
             windData={windData}
           />
+          <WeatherChart coords={props.coords} />
         </div>
+        <SummaryTable
+          weatherData={weatherData}
+          mainData={mainData}
+          windData={windData}
+          sunData={sunData}
+          cloudData={cloudData}
+          coords={props.coords}
+        />
       </div>
     );
   } else {

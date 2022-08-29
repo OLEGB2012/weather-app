@@ -1,0 +1,58 @@
+.summary_table {
+  width: 30%;
+  height: 100%;
+  margin-top: 6%;
+  margin-top: 80px;
+  background-color: white;
+  border-radius: 10px;
+}
+.summary_header {
+  width: 100%;
+  color: #43b9ff;
+}
+.table_grid {
+  border-collapse: collapse;
+  margin-top: 7%;
+}
+tr,
+th,
+td {
+  border: 1px solid #dddddd;
+  padding: 19.4px;
+  border-collapse: collapse;
+  margin: 25px;
+}
+.summary_td {
+  width: 69.5%;
+}
+.table_grid tr:hover {
+  background-color: #ddd;
+}
+
+.display_Something {
+  height: 144px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+.summaryWeatherIcon {
+  width: 80px;
+  height: 80px;
+}
+.temperature {
+  margin: 0px 0px 0px 0px;
+}
+@media screen and (max-width: 900px) {
+  .summary_table {
+    width: 96.4%;
+    margin: 1.5%;
+  }
+  .table_grid {
+    width: 100%;
+  }
+  .tr,
+  th,
+  td {
+    padding: 2%;
+  }
+}

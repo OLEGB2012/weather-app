@@ -1,0 +1,9 @@
+.weather_chart {
+  background-color: white !important;
+}
+
+.weather_container {
+  display: flex;
+  height: 58%;
+  margin-top: 8px;
+}
