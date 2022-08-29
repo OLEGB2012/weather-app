@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { geocoding_api_key } from "./config";
 import Header from "./components/Header";
+import MainData from "./components/MainData";
 
 class App extends Component {
   newState = {}; // used to update state
@@ -91,6 +92,9 @@ class App extends Component {
               this.handleChange(e);
             }}
           />
+          <div className="container">
+            <MainData coords={this.state} />
+          </div>
         </div>
       );
     } else return <div></div>;
