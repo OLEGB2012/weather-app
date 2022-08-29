@@ -27,6 +27,7 @@ const Header = (props) => {
             <option value="Hrodna" />
             <option value="Gomel" />
             <option value="Mogilev" />
+            <option value="Vitebsk" />
           </datalist>
         </div>
         <button

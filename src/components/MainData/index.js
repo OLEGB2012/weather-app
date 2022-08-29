@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { api_key } from "../../config";
 import "./index.css";
+import WeatherCard from "../WeatherCard";
 
 const MainData = (props) => {
   const { latitude, longitude } = props.coords;
@@ -31,7 +32,13 @@ const MainData = (props) => {
   if (weatherData && weatherData !== null) {
     return (
       <div className="main_container">
-        <div className="card_container_main"></div>
+        <div className="card_container_main">
+          <WeatherCard
+            weatherData={weatherData}
+            mainData={mainData}
+            windData={windData}
+          />
+        </div>
       </div>
     );
   } else {
