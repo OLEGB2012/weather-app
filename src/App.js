@@ -37,7 +37,7 @@ class App extends Component {
         countryRegion = "BY"; // Region is set to India
       axios
         .get(
-          `http://dev.virtualearth.net/REST/v1/Locations?&countryRegion=${countryRegion}&locality=${locality}&key=${geocoding_api_key}`
+          `https://dev.virtualearth.net/REST/v1/Locations?&countryRegion=${countryRegion}&locality=${locality}&key=${geocoding_api_key}`
         )
         .then((response) => {
           console.log(response);
