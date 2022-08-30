@@ -4,6 +4,7 @@ import axios from "axios";
 import { geocoding_api_key } from "./config";
 import Header from "./components/Header";
 import MainData from "./components/MainData";
+import TabularData from "./components/TabularData";
 
 class App extends Component {
   newState = {}; // used to update state
@@ -95,6 +96,7 @@ class App extends Component {
           <div className="container">
             <MainData coords={this.state} />
           </div>
+          <TabularData coords={this.state} />
         </div>
       );
     } else return <div></div>;

@@ -27,7 +27,7 @@ const WeatherChart = (props) => {
   useEffect(() => {
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&cnt=7&appid=${api_key}`
+        `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&units=metric&cnt=8&appid=${api_key}`
       )
       .then((response) => {
         setchartData(response.data);

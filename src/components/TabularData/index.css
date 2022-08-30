@@ -1,0 +1,41 @@
+.header {
+  width: 246px;
+}
+.table_data {
+  border-collapse: collapse;
+  width: 95.5%;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  background-color: white;
+  margin: 24px;
+  border-radius: 10px;
+}
+.table_data td,
+.table_data th {
+  text-align: center;
+  color: black;
+  font-weight: 600;
+}
+.table_data tr {
+  border-bottom: 1px solid #d3d3d3;
+}
+.table_data th {
+  padding-bottom: 1.2%;
+  background-color: #80b3ff;
+  color: black;
+  width: 10%;
+}
+.table_data tr:hover {
+  background-color: #ddd;
+}
+@media screen and (max-width: 900px) {
+  .table_data {
+    width: 94%;
+    margin: 1.5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .table_data {
+    width: 94%;
+  }
+}
